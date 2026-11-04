@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Very Disco Christmas 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- WELCOME PAGE -->
+    <main id="welcomePage" class="hero">
+        <p class="eyebrow">THE DONGALLO FAMILY PRESENTS</p>
+        <div class="disco-ball">🪩</div>
+        <h1>A VERY DISCO<br>CHRISTMAS 2026</h1>
+        <p class="tagline">LET'S GLOW, LET'S GROOVE!</p>
+        <p class="event-info">DECEMBER 25, 2026 | EVENING | VENUE TBA</p>
+        <div class="countdown">
+            <p>COUNTDOWN TO CHRISTMAS</p>
+            <h2 id="countdown">COMING SOON</h2>
+        </div>
+        <button class="enter-btn" onclick="enterParty()">ENTER THE PARTY</button>
+        <footer class="footer">A NIGHT OF LIGHTS, MUSIC & MEMORIES</footer>
+    </main>
+
+    <!-- MAIN PARTY PAGE -->
+    <section id="partyPage" class="party-page">
+        <header class="party-header">
+            <p class="eyebrow">THE CELEBRATION BEGINS</p>
+            <h1>WELCOME TO THE PARTY!</h1>
+            <p class="party-subtitle">A VERY DISCO CHRISTMAS 2026</p>
+            <p>One family. One unforgettable night. Endless memories.</p>
+        </header>
+
+        <div class="party-menu">
+            <button class="menu-card" onclick="showSection('invitation')">
+                <span class="menu-icon">🎄</span>
+                <h2>THE INVITATION</h2>
+                <p>Everything you need to know about our celebration.</p>
+                <span class="card-link">EXPLORE →</span>
+            </button>
+            <button class="menu-card" onclick="showSection('secretGroove')">
+                <span class="menu-icon">🎁</span>
+                <h2>THE SECRET GROOVE</h2>
+                <p>Our exclusive family exchange gift.</p>
+                <span class="card-link">ENTER →</span>
+            </button>
+            <button class="menu-card" onclick="showSection('partyCentral')">
+                <span class="menu-icon">🪩</span>
+                <h2>PARTY CENTRAL</h2>
+                <p>Games, activities, and surprises!</p>
+                <span class="card-link">LET'S PLAY →</span>
+            </button>
+            <button class="menu-card" onclick="showSection('memoryLane')">
+                <span class="menu-icon">📸</span>
+                <h2>THE MEMORY LANE</h2>
+                <p>Our favorite family moments.</p>
+                <span class="card-link">VIEW MEMORIES →</span>
+            </button>
+        </div>
+
+        <!-- INVITATION -->
+        <div id="invitation" class="content-section invitation-section">
+            <button class="back-btn" onclick="hideSections()">← BACK TO HOME</button>
+            <div class="invitation-card">
+                <p class="invitation-top">✦ THE DONGALLO FAMILY PRESENTS ✦</p>
+                <div class="invitation-disco">🪩</div>
+                <p>YOU ARE CORDIALLY INVITED TO</p>
+                <h2>A VERY DISCO<br>CHRISTMAS 2026</h2>
+                <p class="invitation-tagline">LET'S GLOW, LET'S GROOVE!</p>
+                <div class="invitation-divider">✧ ✦ ✧</div>
+                <p class="invitation-message">
+                    To our beloved family,<br><br>
+                    The most wonderful time of the year is even more
+                    special when we celebrate it together!
+                    Join us for a magical evening filled with music,
+                    laughter, delicious food, exciting surprises,
+                    and unforgettable family memories.
+                    <br><br>
+                    Let's make this Christmas one to remember!
+                </p>
+                <div class="invitation-details">
+                    <div class="invitation-detail"><span>📅</span><h3>DATE</h3><p>DECEMBER 25, 2026</p></div>
+                    <div class="invitation-detail"><span>🕖</span><h3>TIME</h3><p>EVENING</p></div>
+                    <div class="invitation-detail"><span>📍</span><h3>VENUE</h3><p>TO BE ANNOUNCED</p></div>
+                </div>
+                <div class="dress-code">
+                    <p>✦ THE DRESS CODE ✦</p>
+                    <h3>DISCO BLACKOUT</h3>
+                    <p>Black outfits with silver accessories.</p>
+                    <p>Dress to shine. Bring your sparkle!</p>
+                </div>
+                <p class="invitation-bottom">ONE FAMILY. ONE NIGHT. ENDLESS MEMORIES.</p>
+                <h3 class="invitation-closing">SEE YOU ON THE DANCE FLOOR! 🎄</h3>
+            </div>
+        </div>
+
+        <!-- SECRET GROOVE -->
+        <div id="secretGroove" class="content-section secret-groove-section">
+            <button class="back-btn" onclick="hideSections()">← BACK TO HOME</button>
+            <div class="groove-container">
+                <p class="groove-eyebrow">THE DONGALLO FAMILY EXCHANGE GIFT</p>
+                <h2>THE SECRET GROOVE</h2>
+                <p class="groove-question">WHO'S YOUR SECRET SOMEONE?</p>
+
+                <div id="loginPanel" class="login-panel">
+                    <h3>PARTICIPANT LOGIN</h3>
+                    <p>Enter your name and private access code to enter the Secret Groove.</p>
+                    <label for="participantName">YOUR NAME</label>
+                    <select id="participantName">
+                        <option value="">Choose your name</option>
+                        <option>Mama Mae</option>
+                        <option>Daryl</option>
+                        <option>Alexa</option>
+                        <option>Kobe</option>
+                        <option>Ate Jacque</option>
+                        <option>Ate Nene</option>
+                        <option>Mommy Ping</option>
+                        <option>Tito Dodz</option>
+                        <option>Sabrina</option>
+                        <option>Javie</option>
+                        <option>Mommy Tic</option>
+                        <option>Tito Tony</option>
+                        <option>Abraham</option>
+                        <option>Amanda</option>
+                        <option>Ate Doey</option>
+                        <option>Ate Junel</option>
+                        <option>Wowo Cosme</option>
+                        <option>Wowa Elsie</option>
+                    </select>
+                    <label for="accessCode">YOUR ACCESS CODE</label>
+                    <input id="accessCode" type="password" autocomplete="off"
+                           placeholder="Enter your private code">
+                    <button class="spin-button login-button" id="loginButton" onclick="loginParticipant()">
+                        ✦ ENTER SECRET GROOVE ✦
+                    </button>
+                    <p id="loginMessage" class="form-message" aria-live="polite"></p>
+                </div>
+
+                <div id="wheelPanel" hidden>
+                    <p id="welcomeParticipant" class="welcome-participant"></p>
+                    <div class="wheel-area">
+                        <div class="wheel-pointer">▼</div>
+                        <canvas id="secretWheel" width="600" height="600"></canvas>
+                    </div>
+                    <p class="wheel-caption">ONE SPIN. ONE SECRET. ONE SPECIAL GIFT.</p>
+                    <button class="spin-button" id="spinButton" onclick="spinSecretWheel()">
+                        ✦ SPIN THE WHEEL ✦
+                    </button>
+                    <button class="logout-button" onclick="logoutParticipant()">LOG OUT</button>
+                    <p class="gift-budget">GIFT LIMIT: <strong>₱500 MAX</strong></p>
+                    <div class="wheel-message" id="wheelMessage" aria-live="polite">
+                        Your secret recipient is waiting!
+                    </div>
+                </div>
+
+                <p class="groove-footer">LET THE MYSTERY BEGIN! 🎁</p>
+            </div>
+        </div>
+
+        <!-- PARTY CENTRAL -->
+        <div id="partyCentral" class="content-section">
+            <button class="back-btn" onclick="hideSections()">← BACK TO HOME</button>
+            <h2>🪩 PARTY CENTRAL</h2>
+            <p>Get ready for exciting games and family activities!</p>
+            <p class="coming-soon">GAMES AND ACTIVITIES COMING SOON</p>
+        </div>
+
+        <!-- MEMORY LANE -->
+        <div id="memoryLane" class="content-section memory-lane-section">
+            <button class="back-btn" onclick="hideSections()">← BACK TO HOME</button>
+
+            <div class="memory-container">
+                <p class="memory-eyebrow">THE DONGALLO FAMILY ARCHIVES</p>
+                <h2>THE MEMORY LANE</h2>
+                <p class="memory-intro">Every picture tells a story. Share a favorite moment and help us make this Christmas unforgettable.</p>
+
+                <div class="memory-submit-card">
+                    <h3>✦ SUBMIT A MEMORY ✦</h3>
+                    <p>Sign in with your Secret Groove name and access code. Your photo will be reviewed before it appears in the family gallery.</p>
+
+                    <form id="memoryUploadForm">
+                        <label for="memoryName">YOUR NAME</label>
+                        <select id="memoryName" required>
+                            <option value="">Choose your name</option>
+                            <option>Mama Mae</option><option>Daryl</option><option>Alexa</option>
+                            <option>Kobe</option><option>Ate Jacque</option><option>Ate Nene</option>
+                            <option>Mommy Ping</option><option>Tito Dodz</option><option>Sabrina</option>
+                            <option>Javie</option><option>Mommy Tic</option><option>Tito Tony</option>
+                            <option>Abraham</option><option>Amanda</option><option>Ate Doey</option>
+                            <option>Ate Junel</option><option>Wowo Cosme</option><option>Wowa Elsie</option>
+                        </select>
+
+                        <label for="memoryCode">SECRET GROOVE ACCESS CODE</label>
+                        <input id="memoryCode" type="password" autocomplete="off" required placeholder="Your private access code">
+
+                        <label for="memoryCaption">CAPTION (OPTIONAL)</label>
+                        <textarea id="memoryCaption" maxlength="300" rows="3" placeholder="A little story behind this photo..."></textarea>
+
+                        <label for="memoryPhoto">CHOOSE A PHOTO</label>
+                        <input id="memoryPhoto" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required>
+                        <small class="memory-help">JPG, PNG, WEBP, or GIF. Maximum file size: 8 MB.</small>
+
+                        <button class="memory-submit-btn" id="memorySubmitButton" type="submit">✦ SEND TO MEMORY LANE ✦</button>
+                        <p id="memoryUploadMessage" class="memory-message" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="memory-gallery-heading">
+                    <p class="memory-eyebrow">OUR FAMILY THROUGH THE YEARS</p>
+                    <h3>THE MEMORY GALLERY</h3>
+                    <p>Approved family memories, gathered in one place.</p>
+                </div>
+                <div id="memoryGallery" class="memory-gallery">
+                    <p class="memory-gallery-status">Loading family memories...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">A NIGHT OF LIGHTS, MUSIC & MEMORIES</footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
